@@ -1,0 +1,20 @@
+<span id="dummy" onclick="playSound(this, 'audio/kininokokoro.mp3');">
+    <img src="img/chikas.png" name="Bottom-1" width="115" height="45" border="0" id="Bottom-1"/>
+</span>
+
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+function playSound(el,soundfile) {
+    var embed = document.getElementById("embed");
+    if (!embed) {
+        var embed = document.createElement("embed");
+            embed.id= "embed";
+            embed.setAttribute("src", soundfile);
+            embed.setAttribute("hidden", "true");
+        el.appendChild(embed);
+    } else {
+        embed.parentNode.removeChild(embed);
+    }
+}
+
+</script>
